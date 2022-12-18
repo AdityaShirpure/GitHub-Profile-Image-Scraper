@@ -8,7 +8,7 @@ github_user = input('Input the Github User: ')
 url = 'https://github.com/' + github_user 
 req = requests.get(url)
 
-# Check if the request was successful
+# Checking if the request was successful
 if req.status_code == 200:
   soup = bs(req.content,'html.parser')
   profile_image = soup.find('img',{'alt':'Avatar'})
